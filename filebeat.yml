@@ -1,0 +1,20 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - ./logs/test.log
+  fields_under_root: true
+  fields:
+    log_type: django
+
+  multiline.pattern: '^\['
+  multiline.negate: true
+  multiline.match: after
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  index: "logs-%{+yyyy.MM.dd}" # You can change this pattern to match your requirements
+
+
+setup.template.name: "filebeat"
+setup.template.pattern: "filebeat-*"
