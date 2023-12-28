@@ -7,6 +7,7 @@ Initial
 sh/initial.dev.sh
 ```
 
+Create / update dev settings
 ```bash
 mkdir -p local
 mkdir -p log
