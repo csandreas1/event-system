@@ -1,7 +1,8 @@
-from split_settings.tools import include
-from os import environ
 import os.path
+from os import environ
 from pathlib import Path
+
+from split_settings.tools import include
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'events_core.project.settings')
