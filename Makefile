@@ -12,7 +12,7 @@ install:
 	poetry install
 
 runserver:
-	$(RUN_MANAGE_PY) runserver
+	DJANGO_ENV=dev $(RUN_MANAGE_PY) runserver
 
 migrations:
 	$(RUN_MANAGE_PY) makemigrations
