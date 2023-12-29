@@ -6,7 +6,7 @@ install-pre-commit:
 	poetry run pre-commit uninstall; poetry run pre-commit install
 
 lint:
-	git add .;poetry run pre-commit run
+	git add .;poetry run pre-commit run --all-files
 
 install:
 	poetry install
@@ -56,6 +56,10 @@ flower:
 .PHONY: celery-worker
 celery-worker:
 	poetry run python -m celery -A dropshipping_core worker -l info
+
+.PHONY: dummy
+dummy:
+	poetry run python3 -m events_core.manage EventDummy
 
 .PHONY: update
 update: install migrate install-pre-commit ;

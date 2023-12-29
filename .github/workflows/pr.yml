@@ -27,4 +27,4 @@ jobs:
         run: make install && make install-pre-commit
 
       - name: make Lint
-        run: make lint
+        run: poetry run pre-commit run --all-files
