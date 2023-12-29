@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the events_core like this: BASE_DIR / 'subdir'.
@@ -16,12 +17,13 @@ INSTALLED_APPS = [
 
     # Apps
     'events_core.user_profile.apps.UserprofileConfig',
+    'events_core.event.apps.EventConfig',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -34,7 +36,7 @@ ROOT_URLCONF = 'events_core.project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
