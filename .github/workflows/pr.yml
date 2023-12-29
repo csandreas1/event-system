@@ -1,0 +1,30 @@
+name: Quality Assurance
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v2
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+          
+      - name: View poetry --help
+        run: poetry --help
+        
+      - name: Install Dependencies
+        run: make install && make install-pre-commit
+
+      - name: make Lint
+        run: make lint
