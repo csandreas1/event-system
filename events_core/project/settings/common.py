@@ -13,6 +13,9 @@ INSTALLED_APPS = [
 
     # Third Party
     'debug_toolbar',
+
+    # Apps
+    'events_core.user_profile.apps.UserprofileConfig',
 ]
 
 MIDDLEWARE = [
@@ -45,6 +48,20 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'events_core.project.wsgi.application'
+
+# Database
+# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'events_core',
+        'USER': 'user',
+        'PASSWORD': 'user',
+        'HOST': '0.0.0.0',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
