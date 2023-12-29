@@ -57,5 +57,9 @@ flower:
 celery-worker:
 	poetry run python -m celery -A dropshipping_core worker -l info
 
+.PHONY: dummy
+dummy:
+	poetry run python3 -m events_core.manage EventDummy
+
 .PHONY: update
 update: install migrate install-pre-commit ;

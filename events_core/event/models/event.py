@@ -31,6 +31,9 @@ class Detail(models.Model):
                                     choices=[('pd', 'Paid'), ('fr', 'Free'),
                                              ('dn', 'Donation')])
 
+    def __str__(self):
+        return f'Details of {self.event.title}'
+
 
 class Subscriber(models.Model):
     user = models.OneToOneField(User,
