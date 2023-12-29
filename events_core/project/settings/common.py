@@ -16,6 +16,7 @@ INSTALLED_APPS = [
 
     # Apps
     'events_core.user_profile.apps.UserprofileConfig',
+    'events_core.event.apps.EventConfig',
 ]
 
 MIDDLEWARE = [
