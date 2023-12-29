@@ -1,5 +1,8 @@
 from django.db import models
+
 from .profile import UserProfile
+
+
 class SocialProfile(models.Model):
     # Define choices for social media platforms
     FACEBOOK = 'FB'
