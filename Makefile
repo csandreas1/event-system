@@ -6,7 +6,7 @@ install-pre-commit:
 	poetry run pre-commit uninstall; poetry run pre-commit install
 
 lint:
-	git add .;poetry run pre-commit run
+	git add .;poetry run pre-commit run --all-files
 
 install:
 	poetry install
