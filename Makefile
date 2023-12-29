@@ -3,7 +3,7 @@
 RUN_MANAGE_PY = poetry run python3 -m events_core.manage
 
 install-pre-commit:
-	poetry run pre-commit uninstall; poetry run pre-commit -D install
+	poetry run pre-commit uninstall; poetry run pre-commit install
 
 lint:
 	poetry run pre-commit run --all-files
