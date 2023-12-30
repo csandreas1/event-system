@@ -26,6 +26,7 @@ profile_pics/
 *.pot
 *.pyc
 /staticfiles
+/migrations
 __pycache__
 db.sqlite3
 media
