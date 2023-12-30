@@ -1,28 +1,13 @@
 from django.db import models
 
+from events_core.general.utils.choices import PLATFORM_CHOICES
+
 from .profile import UserProfile
 
 
 class SocialProfile(models.Model):
-    # Define choices for social media platforms
-    FACEBOOK = 'FB'
-    INSTAGRAM = 'IG'
-    TWITTER = 'TW'
-    LINKEDIN = 'LI'
-    DISCORD = 'DI'
-
-    SOCIAL_MEDIA_CHOICES = [
-        (DISCORD, 'Discord'),
-        (FACEBOOK, 'Facebook'),
-        (INSTAGRAM, 'Instagram'),
-        (LINKEDIN, 'LinkedIn'),
-        (TWITTER, 'Twitter'),
-        # Add more social media choices as needed
-    ]
-
-    # Define fields for the SocialProfile model
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    social_media = models.CharField(max_length=2, choices=SOCIAL_MEDIA_CHOICES)
+    social_media = models.CharField(max_length=2, choices=PLATFORM_CHOICES)
     social_profile_name = models.CharField(max_length=150)
 
     def __str__(self):

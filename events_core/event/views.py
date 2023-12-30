@@ -5,6 +5,7 @@ from .models.event import *
 
 
 class EventDetailView(View):
+
     def get(self, request, slug):
         event = Event.objects.get(slug=slug)
 
@@ -12,18 +13,19 @@ class EventDetailView(View):
 
 
 class EventListView(View):
+
     def get(self, request):
         events = Event.objects.all()
         return render(request, 'events/event_list.html', {'events': events})
 
 
 class EventSearchView(View):
+
     def get(self, request):
         # Your search logic here
         # You can access search parameters using request.GET.get('parameter_name')
         # Perform search and get a list of events
-        events = Event.objects.filter(
-            name__icontains=request.GET.get('query', ''))
+        events = Event.objects.filter(name__icontains=request.GET.get('query', ''))
         return render(request, 'events/event_search.html', {'events': events})
 
 
