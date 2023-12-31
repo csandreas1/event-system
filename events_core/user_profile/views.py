@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def detail_view(request):
@@ -6,4 +7,4 @@ def detail_view(request):
 
 
 def edit_profile(request):
-    return HttpResponse('ok')
+    return render(request, 'index.html')

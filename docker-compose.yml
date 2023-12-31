@@ -1,7 +1,26 @@
 version: '3.9'
 
 services:
+  nginx:
+    image: nginx:1-alpine
+    container_name: nginx
+    ports:
+      - '80:80'
+    depends_on:
+      - django  # Ensure that the Django service is started before Nginx
 
+  django:
+    image: python:3-alpine
+    container_name: django
+    working_dir: /app
+    volumes:
+      - ./pyproject.toml:/app/pyproject.toml
+      - ./poetry.lock:/app/poetry.lock
+      - ./README.md:/app/README.md
+      - /events_core:/app/events_core
+    command: sh -c "apk add --no-cache libpq && apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev && pip install poetry && poetry install && poetry run python events_core/manage.py runserver"
+    depends_on:
+      - db
   db:
     image: postgres:16.1-alpine
     container_name: pg
@@ -20,43 +39,43 @@ services:
     restart: unless-stopped
     ports:
       - '6379:6379'
-  elasticsearch:
-    image: elasticsearch:8.11.3
-    container_name: es
-    environment:
-      - discovery.type=single-node
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
-      - xpack.security.enabled=false
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-    networks:
-      - elastic
-  kibana:
-    image: kibana:8.8.1
-    container_name: kib
-    ports:
-      - "5601:5601"
-    depends_on:
-      - elasticsearch
-    networks:
-      - elastic
-
-  filebeat:
-      container_name: filebeat
-      image: docker.elastic.co/beats/filebeat:7.8.0
-      volumes:
-        - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
-        - ./logs:/usr/share/filebeat/logs
-      environment:
-        ELASTICSEARCH_URL: http://elasticsearch:9200
-      networks:
-        - elastic
-      links:
-        - kibana
-        - elasticsearch
-      depends_on:
-        - elasticsearch
+#  elasticsearch:
+#    image: elasticsearch:8.11.3
+#    container_name: es
+#    environment:
+#      - discovery.type=single-node
+#      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+#      - xpack.security.enabled=false
+#    ports:
+#      - "9200:9200"
+#      - "9300:9300"
+#    networks:
+#      - elastic
+#  kibana:
+#    image: kibana:8.8.1
+#    container_name: kib
+#    ports:
+#      - "5601:5601"
+#    depends_on:
+#      - elasticsearch
+#    networks:
+#      - elastic
+#
+#  filebeat:
+#      container_name: filebeat
+#      image: docker.elastic.co/beats/filebeat:7.8.0
+#      volumes:
+#        - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
+#        - ./logs:/usr/share/filebeat/logs
+#      environment:
+#        ELASTICSEARCH_URL: http://elasticsearch:9200
+#      networks:
+#        - elastic
+#      links:
+#        - kibana
+#        - elasticsearch
+#      depends_on:
+#        - elasticsearch
 volumes:
   postgresql-data:
     driver: local
