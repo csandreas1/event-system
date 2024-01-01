@@ -2,25 +2,14 @@ version: '3.9'
 
 services:
   nginx:
-    image: nginx:1-alpine
+    image: nginx:latest
     container_name: nginx
+    restart: always
     ports:
-      - '80:80'
-    depends_on:
-      - django  # Ensure that the Django service is started before Nginx
-
-  django:
-    image: python:3-alpine
-    container_name: django
-    working_dir: /app
+      - "80:80"
     volumes:
-      - ./pyproject.toml:/app/pyproject.toml
-      - ./poetry.lock:/app/poetry.lock
-      - ./README.md:/app/README.md
-      - /events_core:/app/events_core
-    command: sh -c "apk add --no-cache libpq && apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev && pip install poetry && poetry install && poetry run python events_core/manage.py runserver"
-    depends_on:
-      - db
+      - ./staticfiles:/app/staticfiles
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
   db:
     image: postgres:16.1-alpine
     container_name: pg

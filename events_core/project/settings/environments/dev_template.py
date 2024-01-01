@@ -1,6 +1,5 @@
 DEBUG = True
 
-INTERNAL_IPS = ['127.0.0.1']
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-@qh1-(7e=(7jhapy#twgd+z60en4a@3!(2cb_si&71(t$wl%iy'
@@ -38,3 +37,6 @@ TIME_ZONE = 'Europe/Athens'
 USE_I18N = True
 
 USE_TZ = True
+
+# nginx url
+STATIC_URL = 'http://localhost/static/'
