@@ -3,7 +3,7 @@ from pathlib import Path
 
 # Build paths inside the events_core like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-print(BASE_DIR)
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -30,7 +30,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-print(BASE_DIR)
+
 ROOT_URLCONF = 'events_core.project.urls'
 
 TEMPLATES = [
@@ -48,7 +48,7 @@ TEMPLATES = [
         },
     },
 ]
-print(TEMPLATES)
+
 WSGI_APPLICATION = 'events_core.project.wsgi.application'
 
 # Database

@@ -2,23 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <title>Xhibiter | NFT Marketplace HTML Template</title>
+    {% load render_bundle from webpack_loader %}
 
     <meta charset="utf-8" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
+    {% render_bundle 'styles' 'css' %}
 
     <!-- Css -->
-    <link rel="stylesheet" href="/static/css/style.css" />
+      <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+    <link rel="stylesheet" href="http://localhost:80/static/css/style.css" />
 
     <!-- Dark Mode JS -->
-    <script src="/static/js/darkMode.bundle.js"></script>
+    <script src="http://localhost:80/static/js/darkMode.bundle.js"></script>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png" />
+    <link rel="shortcut icon" href="http://localhost:80/static/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://localhost:80/static/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://localhost:80/static/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://localhost:80/static/img/apple-touch-icon-114x114.png" />
   </head>
 
   <body
@@ -31,8 +35,8 @@
       <div class="flex items-center px-6 py-6 xl:px-24">
         <!-- Logo -->
         <a href="index.html" class="shrink-0">
-          <img src="/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-          <img src="/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+          <img src="http://localhost:80/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+          <img src="http://localhost:80/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
         </a>
 
         <!-- Search -->
@@ -68,8 +72,8 @@
           >
             <!-- Mobile Logo -->
             <a href="index.html" class="shrink-0">
-              <img src="/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-              <img src="/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
             </a>
 
             <!-- Mobile Menu Close -->
@@ -1231,7 +1235,7 @@
       <!-- Contact -->
       <section class="relative py-24 dark:bg-jacarta-800">
         <picture class="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-          <img src="/static/img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
+          <img src="http://localhost:80/static/img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
         </picture>
         <div class="container">
           <div class="lg:flex">
@@ -1550,8 +1554,8 @@
           <div class="col-span-full sm:col-span-3 md:col-span-4">
             <!-- Logo -->
             <a href="index.html" class="mb-6 inline-block">
-              <img src="/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-              <img src="/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
             </a>
             <p class="mb-12 dark:text-jacarta-300">
               Create, sell and collect truly rare digital artworks. Powered by blockchain technology.
@@ -1690,9 +1694,10 @@
         </div>
       </div>
     </footer>
+    {% render_bundle 'vendor' 'js' %}
 
     <!-- JS Scripts -->
-    <script src="/static/js/app.bundle.js"></script>
-    <script src="/static/js/contactForm.bundle.js"></script>
+    <script src="http://localhost:80/static/js/app.bundle.js"></script>
+    <script src="http://localhost:80/static/js/contactForm.bundle.js"></script>
   </body>
 </html>

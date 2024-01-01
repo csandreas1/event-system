@@ -13,8 +13,8 @@ isDev = ENV == 'dev'
 LOCAL_SETTINGS_PATH = BASE_DIR / 'local/settings.dev.py'
 
 base_settings = [
-    LOCAL_SETTINGS_PATH if isDev else 'environments/prod.py',
     'common.py',  # standard django settings
+    LOCAL_SETTINGS_PATH if isDev else 'environments/prod.py',
 ]
 
 include(*base_settings)

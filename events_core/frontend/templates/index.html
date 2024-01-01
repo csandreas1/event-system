@@ -2,23 +2,24 @@
 <html lang="en" dir="ltr" data-scheme="light">
   <head>
     <title>Xhibiter | NFT Marketplace HTML Template</title>
-
+    {% load static %}
     <meta charset="utf-8" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
 
     <!-- Css -->
-    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Dark Mode JS -->
-    <script src="/static/js/darkMode.bundle.js"></script>
+    <link rel="stylesheet" href="{% static 'js/darkMode.bundle.js' %}">
+x
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/static/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png" />
+    <link rel="shortcut icon" href="http://localhost:80/static/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://localhost:80/static/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="http://localhost:80/static/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="http://localhost:80/static/img/apple-touch-icon-114x114.png" />
   </head>
 
   <body
@@ -31,8 +32,8 @@
       <div class="flex items-center px-6 py-6 xl:px-24">
         <!-- Logo -->
         <a href="index.html" class="shrink-0">
-          <img src="/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-          <img src="/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+          <img src="http://localhost:80/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+          <img src="http://localhost:80/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
         </a>
 
         <!-- Search -->
@@ -68,8 +69,8 @@
           >
             <!-- Mobile Logo -->
             <a href="index.html" class="shrink-0">
-              <img src="/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-              <img src="/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
             </a>
 
             <!-- Mobile Menu Close -->
@@ -1221,10 +1222,10 @@
       <!-- Hero -->
       <section class="relative pb-10 pt-20 md:pt-32 lg:h-[88vh]">
         <picture class="pointer-events-none absolute inset-x-0 top-0 -z-10 dark:hidden">
-          <img src="/static/img/gradient.jpg" alt="gradient" class="w-full" />
+          <img src="http://localhost:80/static/img/gradient.jpg" alt="gradient" class="w-full" />
         </picture>
         <picture class="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">
-          <img src="/static/img/gradient_dark.jpg" alt="gradient dark" class="w-full" />
+          <img src="http://localhost:80/static/img/gradient_dark.jpg" alt="gradient dark" class="w-full" />
         </picture>
 
         <div class="container h-full">
@@ -1280,10 +1281,11 @@
                   </defs>
                   <g clip-path="url(#clipping)">
                     <!-- Bg image -->
-                    <image href="/static/img/hero/hero.jpg" width="200" height="200" clip-path="url(#clipping)" />
+                      {% load static %}
+                    <image href="{% static 'img/hero/hero.jpg' %}" width="200" height="200" clip-path="url(#clipping)" />
                   </g>
                 </svg>
-                <img src="/static/img/hero/3D_elements.png" alt="" class="absolute top-0 animate-fly md:-right-[10%]" />
+                <img src="http://localhost:80/static/img/hero/3D_elements.png" alt="" class="absolute top-0 animate-fly md:-right-[10%]" />
               </div>
             </div>
           </div>
@@ -1317,7 +1319,7 @@
                       <figure>
                         <a href="item.html">
                           <img
-                            src="/static/img/products/item_1.jpg"
+                            src="http://localhost:80/static/img/products/item_1.jpg"
                             alt="item 1"
                             width="230"
                             height="230"
@@ -1405,7 +1407,7 @@
                       <figure>
                         <a href="item.html">
                           <img
-                            src="/static/img/products/item_2.jpg"
+                            src="http://localhost:80/static/img/products/item_2.jpg"
                             alt="item 2"
                             width="230"
                             height="230"
@@ -1492,7 +1494,7 @@
                       <figure>
                         <a href="item.html">
                           <img
-                            src="/static/img/products/item_6.jpg"
+                            src="http://localhost:80/static/img/products/item_6.jpg"
                             alt="item 6"
                             width="230"
                             height="230"
@@ -1579,7 +1581,7 @@
                       <figure>
                         <a href="item.html">
                           <img
-                            src="/static/img/products/item_4.jpg"
+                            src="http://localhost:80/static/img/products/item_4.jpg"
                             alt="item 4"
                             width="230"
                             height="230"
@@ -1666,8 +1668,8 @@
                       <figure class="relative">
                         <a href="item.html">
                           <img
-                            src="/static/img/pixel.jpg"
-                            data-src="/static/img/products/item_3.gif"
+                            src="http://localhost:80/static/img/pixel.jpg"
+                            data-src="http://localhost:80/static/img/products/item_3.gif"
                             alt="item 3"
                             width="230"
                             height="230"
@@ -1754,8 +1756,8 @@
                       <figure class="relative">
                         <a href="item.html">
                           <img
-                            src="/static/img/pixel.jpg"
-                            data-src="/static/img/products/item_5.jpg"
+                            src="http://localhost:80/static/img/pixel.jpg"
+                            data-src="http://localhost:80/static/img/products/item_5.jpg"
                             alt="item 5"
                             width="230"
                             height="230"
@@ -1874,7 +1876,7 @@
       <!-- Top Collections -->
       <section class="relative py-24 dark:bg-jacarta-800">
         <picture class="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-          <img src="/static/img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
+          <img src="http://localhost:80/static/img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
         </picture>
         <div class="container">
           <div class="mb-12 text-center font-display text-3xl text-jacarta-700 dark:text-white">
@@ -1928,7 +1930,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_1.jpg" alt="avatar 1" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_1.jpg" alt="avatar 1" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -1965,7 +1967,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_2.jpg" alt="avatar 2" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_2.jpg" alt="avatar 2" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-sm text-white dark:border-jacarta-600"
                   >
@@ -2002,7 +2004,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_3.jpg" alt="avatar 3" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_3.jpg" alt="avatar 3" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2024,7 +2026,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_4.jpg" alt="avatar 4" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_4.jpg" alt="avatar 4" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2046,7 +2048,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_5.jpg" alt="avatar 5" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_5.jpg" alt="avatar 5" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2068,7 +2070,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_6.gif" alt="avatar 6" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_6.gif" alt="avatar 6" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2090,7 +2092,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_7.jpg" alt="avatar 7" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_7.jpg" alt="avatar 7" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2127,7 +2129,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_8.jpg" alt="avatar 8" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_8.jpg" alt="avatar 8" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2164,7 +2166,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_9.jpg" alt="avatar 9" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_9.jpg" alt="avatar 9" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2186,7 +2188,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_10.jpg" alt="avatar 10" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_10.jpg" alt="avatar 10" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2223,7 +2225,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_11.jpg" alt="avatar 11" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_11.jpg" alt="avatar 11" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2245,7 +2247,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_12.jpg" alt="avatar 12" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_12.jpg" alt="avatar 12" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2267,7 +2269,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_13.jpg" alt="avatar 13" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_13.jpg" alt="avatar 13" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2304,7 +2306,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_14.jpg" alt="avatar 14" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_14.jpg" alt="avatar 14" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2326,7 +2328,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_15.jpg" alt="avatar 15" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_15.jpg" alt="avatar 15" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2363,7 +2365,7 @@
             >
               <figure class="mr-4 shrink-0">
                 <a href="collection.html" class="relative block">
-                  <img src="/static/img/avatars/avatar_16.jpg" alt="avatar 16" class="rounded-2lg" loading="lazy" />
+                  <img src="http://localhost:80/static/img/avatars/avatar_16.jpg" alt="avatar 16" class="rounded-2lg" loading="lazy" />
                   <div
                     class="absolute -left-3 top-1/2 flex h-6 w-6 -translate-y-2/4 items-center justify-center rounded-full border-2 border-white bg-jacarta-700 text-xs text-white dark:border-jacarta-600"
                   >
@@ -2646,7 +2648,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_5.jpg"
+                      src="http://localhost:80/static/img/products/item_5.jpg"
                       alt="item 5"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -2678,7 +2680,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_1.png"
+                          src="http://localhost:80/static/img/avatars/creator_1.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -2686,7 +2688,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_1.png"
+                          src="http://localhost:80/static/img/avatars/owner_1.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -2791,7 +2793,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_4.jpg"
+                      src="http://localhost:80/static/img/products/item_4.jpg"
                       alt="item 4"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -2823,7 +2825,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_2.png"
+                          src="http://localhost:80/static/img/avatars/creator_2.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -2831,7 +2833,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_2.png"
+                          src="http://localhost:80/static/img/avatars/owner_2.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -2936,7 +2938,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_7.jpg"
+                      src="http://localhost:80/static/img/products/item_7.jpg"
                       alt="item 7"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -2968,7 +2970,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_3.png"
+                          src="http://localhost:80/static/img/avatars/creator_3.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -2976,7 +2978,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_3.png"
+                          src="http://localhost:80/static/img/avatars/owner_3.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -3081,7 +3083,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_6.jpg"
+                      src="http://localhost:80/static/img/products/item_6.jpg"
                       alt="item 6"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -3113,7 +3115,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_4.png"
+                          src="http://localhost:80/static/img/avatars/creator_4.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -3121,7 +3123,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_4.png"
+                          src="http://localhost:80/static/img/avatars/owner_4.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -3226,7 +3228,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_8.jpg"
+                      src="http://localhost:80/static/img/products/item_8.jpg"
                       alt="item 8"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -3258,7 +3260,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_3.png"
+                          src="http://localhost:80/static/img/avatars/creator_3.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -3266,7 +3268,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_5.png"
+                          src="http://localhost:80/static/img/avatars/owner_5.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -3371,7 +3373,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_9.jpg"
+                      src="http://localhost:80/static/img/products/item_9.jpg"
                       alt="item 9"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -3403,7 +3405,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_6.png"
+                          src="http://localhost:80/static/img/avatars/creator_6.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -3411,7 +3413,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_4.png"
+                          src="http://localhost:80/static/img/avatars/owner_4.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -3516,7 +3518,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_10.jpg"
+                      src="http://localhost:80/static/img/products/item_10.jpg"
                       alt="item 10"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -3548,7 +3550,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_2.png"
+                          src="http://localhost:80/static/img/avatars/creator_2.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -3556,7 +3558,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_7.png"
+                          src="http://localhost:80/static/img/avatars/owner_7.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -3661,7 +3663,7 @@
                 <figure class="relative">
                   <a href="item.html">
                     <img
-                      src="/static/img/products/item_11.gif"
+                      src="http://localhost:80/static/img/products/item_11.gif"
                       alt="item 11"
                       class="w-full rounded-[0.625rem]"
                       loading="lazy"
@@ -3693,7 +3695,7 @@
                     <div class="flex -space-x-2">
                       <a href="#">
                         <img
-                          src="/static/img/avatars/creator_8.png"
+                          src="http://localhost:80/static/img/avatars/creator_8.png"
                           alt="creator"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Creator: Sussygirl"
@@ -3701,7 +3703,7 @@
                       </a>
                       <a href="#">
                         <img
-                          src="/static/img/avatars/owner_5.png"
+                          src="http://localhost:80/static/img/avatars/owner_5.png"
                           alt="owner"
                           class="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
                           data-tippy-content="Owner: Sussygirl"
@@ -3807,7 +3809,7 @@
       <!-- Process / Newsletter -->
       <section class="relative py-24 dark:bg-jacarta-800">
         <picture class="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-          <img src="/static/img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
+          <img src="http://localhost:80/static/img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
         </picture>
         <div class="container">
           <h2 class="mb-16 text-center font-display text-3xl text-jacarta-700 dark:text-white">
@@ -4102,7 +4104,7 @@
 
             <div class="relative flex items-center border-t border-b border-jacarta-100 py-4 dark:border-jacarta-600">
               <figure class="mr-5 self-start">
-                <img src="/static/img/avatars/avatar_2.jpg" alt="avatar 2" class="rounded-2lg" loading="lazy" />
+                <img src="http://localhost:80/static/img/avatars/avatar_2.jpg" alt="avatar 2" class="rounded-2lg" loading="lazy" />
               </figure>
 
               <div>
@@ -4317,8 +4319,8 @@
           <div class="col-span-full sm:col-span-3 md:col-span-4">
             <!-- Logo -->
             <a href="index.html" class="mb-6 inline-block">
-              <img src="/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-              <img src="/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo.png" class="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
+              <img src="http://localhost:80/static/img/logo_white.png" class="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
             </a>
             <p class="mb-12 dark:text-jacarta-300">
               Create, sell and collect truly rare digital artworks. Powered by blockchain technology.
@@ -4491,6 +4493,6 @@
     </footer>
 
     <!-- JS Scripts -->
-    <script src="/static/js/app.bundle.js"></script>
+    <script src="{% static 'js/app.bundle.js' %}"></script>
   </body>
 </html>

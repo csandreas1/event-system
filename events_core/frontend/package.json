@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode=development --open && tailwindcss -i ./src/css/style.css -o ./dist/css/style.css --watch",
+    "start": "webpack serve --mode=development",
     "build": "webpack --config webpack-prod.config.js && rtlcss ./dist/css/style.css ./dist/css/style-rtl.css",
     "rtlcss": "rtlcss ./dist/css/style.css ./dist/css/style-rtl.css"
   },
