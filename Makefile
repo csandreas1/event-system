@@ -14,6 +14,10 @@ install:
 runserver:
 	DJANGO_ENV=dev $(RUN_MANAGE_PY) runserver
 
+.PHONY: collect-static
+collect-static:
+	$(RUN_MANAGE_PY) collectstatic
+
 migrations:
 	$(RUN_MANAGE_PY) makemigrations
 
